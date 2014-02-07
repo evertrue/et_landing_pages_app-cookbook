@@ -40,7 +40,7 @@ Vagrant.configure('2') do |config|
     chef.encrypted_data_bag_secret_key_path = "#{ENV['HOME']}/.chef/encrypted_data_bag_secret"
 
     chef.run_list = [
-        'recipe[et_landingpages_app::default]'
+        'recipe[et_landing_pages_app::default]'
     ]
   end
 end

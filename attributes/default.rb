@@ -1,7 +1,7 @@
 set['nginx']['default_site_enabled'] = false
-set['nginx']['socketproxy']['default_app'] = 'landingpages'
+set['nginx']['socketproxy']['default_app'] = 'landing_pages'
 set['nginx']['socketproxy']['apps'] = {
-  'landingpages' => {
+  'landing_pages' => {
     'prepend_slash' => false,
     'context_name' => '',
     'subdir' => 'current',
@@ -12,4 +12,4 @@ set['nginx']['socketproxy']['apps'] = {
   }
 }
 
-set['et_rails_app']['db']['source_name'] = 'landingpages'
+set['et_rails_app']['db']['source_name'] = 'landing_pages'

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'et_landingpages_app::default' do
+describe 'et_landing_pages_app::default' do
   let(:chef_run) do
     ChefSpec::Runner.new do |node|
       # Create a new environment
@@ -19,17 +19,17 @@ describe 'et_landingpages_app::default' do
     stub_data_bag_item('endpoints', 'rds').and_return({
       id: 'rds',
       prod: {
-        landingpages: {
+        landing_pages: {
           host: 'prod-etdb',
-          schema_name: 'landingpages'
+          schema_name: 'landing_pages'
         }
       }
     })
 
     Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'database_credentials').and_return({
       'prod' => {
-        'landingpages' => {
-          'username' => 'landingpages',
+        'landing_pages' => {
+          'username' => 'landing_pages',
           'password' => 'password'
         }
       }

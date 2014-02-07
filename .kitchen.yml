@@ -13,4 +13,4 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[et_landingpages_app::default]
+      - recipe[et_landing_pages_app::default]

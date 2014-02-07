@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: et_landingpages_app
+# Cookbook Name:: et_landing_pages_app
 # Recipe:: default
 #
 # Copyright (C) 2013 EverTrue, Inc.

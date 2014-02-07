@@ -1,4 +1,4 @@
-# et_landingpages_app cookbook
+# et_landing_pages_app cookbook
 
 Simple cookbook to set up [evertrue/scout](https://github.com/evertrue/scout).
 While that’s not a Rails app, it’s a Sinatra app, and has all the same base
@@ -10,7 +10,7 @@ requirements from an instance.
 
 # Usage
 
-Include the `et_landingpages_app::default` recipe in your run list.
+Include the `et_landing_pages_app::default` recipe in your run list.
 
 # Attributes
 
