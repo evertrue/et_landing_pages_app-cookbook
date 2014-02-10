@@ -14,4 +14,5 @@ data_source = data_bag_item('endpoints', 'rds')[node.chef_environment][node['et_
 node.set['et_rails_app']['db']['schema_name'] = data_source['schema_name']
 node.set['et_rails_app']['db']['host'] = data_source['host']
 
+include_recipe 'et_users::evertrue'
 include_recipe 'et_rails_app'
