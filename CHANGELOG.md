@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Install ImageMagick
+
 ## 1.0.3
 
 * Bump et_rails_app 3.0.4
