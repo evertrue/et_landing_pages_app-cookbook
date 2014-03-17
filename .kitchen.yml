@@ -7,10 +7,14 @@ provisioner:
   name: chef_solo
 
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.4
+- name: ubuntu-12.04
+  driver_config:
+    customize:
+      cpus: 4
+      memory: 1536
 
 suites:
   - name: default
     run_list:
       - recipe[et_landing_pages_app::default]
+    encrypted_data_bag_secret_key_path: <%= ENV['HOME'] %>/.chef/encrypted_data_bag_secret

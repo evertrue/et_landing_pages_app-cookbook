@@ -1,0 +1,93 @@
+{
+  "id": "rds",
+  "prod": {
+    "auth": {
+      "host": "auth-prod.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "auth"
+    },
+    "reporting": {
+      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "reporting"
+    },
+    "importer": {
+      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "importer"
+    },
+    "lids": {
+      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "lids"
+    },
+    "reds": {
+      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "reds-api"
+    },
+    "etdb": {
+      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "etdb"
+    },
+    "landing_pages": {
+      "host": "prod-data-importer.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "landing_pages"
+    }
+  },
+  "stage": {
+    "auth": {
+      "host": "stage-etdb-2.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "auth"
+    },
+    "reporting": {
+      "host": "stage-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "reporting"
+    },
+    "importer": {
+      "host": "stage-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "importer"
+    },
+    "lids": {
+      "host": "stage-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "lids"
+    },
+    "reds": {
+      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "reds-api"
+    },
+    "etdb": {
+      "host": "stage-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "etdb"
+    },
+    "landing_pages": {
+      "host": "stage-etdb-2.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "schema_name": "landing_pages"
+    }
+  },
+  "_default": {
+    "reporting": {
+      "host": "169.254.169.254",
+      "schema_name": "reporting"
+    },
+    "auth": {
+      "host": "169.254.169.254",
+      "schema_name": "auth"
+    },
+    "importer": {
+      "host": "169.254.169.254",
+      "schema_name": "importer"
+    },
+    "lids": {
+      "host": "169.254.169.254",
+      "schema_name": "lids"
+    },
+    "reds": {
+      "host": "169.254.169.254",
+      "schema_name": "reds-api"
+    },
+    "etdb": {
+      "host": "169.254.169.255",
+      "schema_name": "etdb"
+    },
+    "landing_pages": {
+      "host": "169.254.169.255",
+      "schema_name": "landing_pages"
+    }
+  }
+}
