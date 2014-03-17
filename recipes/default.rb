@@ -9,6 +9,8 @@
 
 Chef::Log.info("Chef Environment: #{node.chef_environment}")
 
+include_recipe 'apt'
+
 %w(
   libmagickcore-dev
   libmagickwand-dev

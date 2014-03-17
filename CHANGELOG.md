@@ -1,3 +1,12 @@
+## 1.0.6
+
+* Include apt cookbook
+* Add serverspec tests
+
+## 1.0.5
+
+* Install ImageMagick development libraries
+
 ## 1.0.4
 
 * Install ImageMagick
