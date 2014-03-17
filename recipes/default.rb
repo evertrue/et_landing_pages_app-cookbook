@@ -9,7 +9,12 @@
 
 Chef::Log.info("Chef Environment: #{node.chef_environment}")
 
-package 'imagemagick'
+%w(
+  libmagickcore-dev
+  libmagickwand-dev
+).each do |pkg|
+  package pkg
+end
 
 data_source = data_bag_item(
     'endpoints',
