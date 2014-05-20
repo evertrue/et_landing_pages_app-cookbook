@@ -1,3 +1,7 @@
+## 1.0.8
+
+* Bump et_rails_app 5.0.2
+
 ## 1.0.7
 
 * Minor cleanup
