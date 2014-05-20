@@ -1,10 +1,10 @@
-chef_api :config
-site :opscode
+source 'https://berks.evertrue.com'
+source 'http://api.berkshelf.com'
 
 metadata
 
-group 'test' do
-  cookbook 'chef-solo-search', github: 'edelight/chef-solo-search'
+group :integration do
+  cookbook 'chef-solo-search',
+           git: 'git@github.com:edelight/chef-solo-search.git',
+           tag: '0.5.1'
 end
-
-cookbook 'et_rails_app', path: '../et_rails_app'
