@@ -1,3 +1,13 @@
+## 1.0.7
+
+* Minor cleanup
+* Bump et_rails_app 5.0.1
+* Constrain et_users to at least 1.4.1
+* Move EDBS to global config
+* Add Rubocop exeptions
+* Update to Berksfile v3
+* Clean up the Gemfile
+
 ## 1.0.6
 
 * Include apt cookbook
