@@ -1,3 +1,7 @@
+## 1.0.10
+
+* Bump et_rails_app 5.0.10
+
 ## 1.0.9
 
 * Bump et_rails_app 5.0.3
