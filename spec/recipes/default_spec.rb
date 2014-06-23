@@ -8,10 +8,10 @@ describe 'et_landing_pages_app::default' do
       env.name 'prod'
 
       # Stub the node to return this environment
-      node.stub(:chef_environment).and_return(env.name)
+      allow(node).to receive(:chef_environment).and_return(env.name)
 
       # Stub any calls to Environment.load to return this environment
-      Chef::Environment.stub(:load).and_return(env)
+      allow(Chef::Environment).to receive(:load).and_return(env)
     end.converge(described_recipe)
   end
 
@@ -26,7 +26,7 @@ describe 'et_landing_pages_app::default' do
       }
     )
 
-    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'database_credentials').and_return(
+    allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'database_credentials').and_return(
       'prod' => {
         'landing_pages' => {
           'username' => 'landing_pages',
@@ -35,7 +35,7 @@ describe 'et_landing_pages_app::default' do
       }
     )
 
-    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'aws_credentials').and_return(
+    allow(Chef::EncryptedDataBagItem).to receive(:load).with('secrets', 'aws_credentials').and_return(
       'RailsDeploy-prod' => {
         'access_key_id' => 'AAAAAAAAAAAAAAAAAAAA',
         'secret_access_key' => 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
