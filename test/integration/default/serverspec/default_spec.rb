@@ -18,7 +18,7 @@ describe file('/etc/nginx/sites-enabled/socketproxy.conf') do
 end
 
 describe file('/etc/nginx/sites-available/socketproxy.conf') do
-  its(:content) { should match(%r(root .*/landing_pages/.*)) }
+  its(:content) { should match(%r{root .*/landing_pages/.*}) }
 end
 
 describe service('nginx') do
@@ -26,7 +26,7 @@ describe service('nginx') do
 end
 
 describe process('nginx') do
-  its(:args) { should match(%r(master process /usr/sbin/nginx)) }
+  its(:args) { should match(%r{master process /usr/sbin/nginx}) }
 end
 
 describe port(8080) do

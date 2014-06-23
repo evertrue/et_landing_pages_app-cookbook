@@ -16,7 +16,7 @@ describe 'et_landing_pages_app::default' do
   end
 
   before do
-    stub_data_bag_item('endpoints', 'rds').and_return({
+    stub_data_bag_item('endpoints', 'rds').and_return(
       id: 'rds',
       prod: {
         landing_pages: {
@@ -24,23 +24,23 @@ describe 'et_landing_pages_app::default' do
           schema_name: 'landing_pages'
         }
       }
-    })
+    )
 
-    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'database_credentials').and_return({
+    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'database_credentials').and_return(
       'prod' => {
         'landing_pages' => {
           'username' => 'landing_pages',
           'password' => 'password'
         }
       }
-    })
+    )
 
-    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'aws_credentials').and_return({
+    Chef::EncryptedDataBagItem.stub(:load).with('secrets', 'aws_credentials').and_return(
       'RailsDeploy-prod' => {
         'access_key_id' => 'AAAAAAAAAAAAAAAAAAAA',
         'secret_access_key' => 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
       }
-    })
+    )
   end
 
   it 'includes et_rails_app' do
