@@ -1,6 +1,14 @@
 et_landing_pages_app CHANGELOG
 ==============================
 
+v1.0.11 (2014-06-23)
+--------------------
+
+* Bump et_rails_app to v5.1.4
+* Clean up test & config files
+* Add tests
+
+
 v1.0.10 (2014-06-02)
 --------------------
 
