@@ -2,7 +2,8 @@ require 'chefspec'
 require 'chefspec/berkshelf'
 
 RSpec.configure do |config|
-  config.log_level = :fatal
+  config.platform = 'ubuntu'
+  config.version = '12.04'
 end
 
 # at_exit { ChefSpec::Coverage.report! }
