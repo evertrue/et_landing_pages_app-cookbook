@@ -14,6 +14,7 @@ include_recipe 'apt'
 %w(
   libmagickcore-dev
   libmagickwand-dev
+  imagemagick
 ).each do |pkg|
   package pkg
 end
