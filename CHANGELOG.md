@@ -1,5 +1,9 @@
 # et_landing_pages_app CHANGELOG
 
+## v2.0.0 (2015-12-15)
+
+* Bump to `et_rails_app` ~> 10.0
+
 ## v1.2.0 (2015-03-18)
 
 * Update `et_rails_app` to ~> 8.0
