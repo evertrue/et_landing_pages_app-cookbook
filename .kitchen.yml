@@ -1,9 +1,20 @@
 ---
 driver:
-  name: vagrant
-  customize:
-    cpus: 4
-    memory: 1536
+  name: ec2
+  require_chef_omnibus: 12.14.60
+  aws_ssh_key_id: <%= ENV['AWS_KEYPAIR_NAME'] %>
+  region: us-east-1
+  availability_zone: us-east-1b
+  security_group_ids: ['ci-testing']
+  instance_type: c3.large
+  interface: public
+  tags:
+    Env: public
+    Type: test
+
+transport:
+  name: sftp
+  ssh_key: <%= ENV['EC2_SSH_KEY_PATH'] %>
 
 provisioner:
   name: chef_zero
@@ -14,9 +25,16 @@ provisioner:
     environment: _default
 
 platforms:
-  - name: ubuntu-12.04
+  - name: ubuntu-14.04
+    driver_config:
+      tags:
+        Name: et-landing-pages-app-default-ubuntu-1204
+        Env: public
 
 suites:
   - name: default
     run_list:
       - recipe[et_landing_pages_app::default]
+    attributes:
+      et_rails_app:
+        mocking: true
