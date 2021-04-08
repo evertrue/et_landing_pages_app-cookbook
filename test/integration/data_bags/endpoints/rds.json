@@ -2,7 +2,7 @@
   "id": "rds",
   "prod": {
     "auth": {
-      "host": "auth-prod.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "host": "prod-auth.rds.evertrue.com",
       "schema_name": "auth"
     },
     "reporting": {
@@ -26,7 +26,7 @@
       "schema_name": "etdb"
     },
     "landing_pages": {
-      "host": "prod-data-importer.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "host": "prod-importer.rds.evertrue.com",
       "schema_name": "landing_pages"
     }
   },
