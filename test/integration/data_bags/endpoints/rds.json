@@ -10,7 +10,7 @@
       "schema_name": "reporting"
     },
     "importer": {
-      "host": "prod-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "host": "prod-importer.rds.evertrue.com",
       "schema_name": "importer"
     },
     "lids": {
@@ -26,13 +26,13 @@
       "schema_name": "etdb"
     },
     "landing_pages": {
-      "host": "prod-importer.rds.evertrue.com",
+      "host": "prod-landing-pages.rds.evertrue.com",
       "schema_name": "landing_pages"
     }
   },
   "stage": {
     "auth": {
-      "host": "stage-etdb-2.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "host": "stage-auth.rds.evertrue.com",
       "schema_name": "auth"
     },
     "reporting": {
@@ -40,7 +40,7 @@
       "schema_name": "reporting"
     },
     "importer": {
-      "host": "stage-etdb.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "host": "stage-importer.rds.evertrue.com",
       "schema_name": "importer"
     },
     "lids": {
@@ -56,7 +56,7 @@
       "schema_name": "etdb"
     },
     "landing_pages": {
-      "host": "stage-etdb-2.cg0lvth7azzh.us-east-1.rds.amazonaws.com",
+      "host": "stage-landing-pages.rds.evertrue.com",
       "schema_name": "landing_pages"
     }
   },
